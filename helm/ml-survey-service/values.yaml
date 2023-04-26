@@ -5,6 +5,7 @@
 APP_PORTAL_BASE_URL: https://staging.sunbirded.org
 APPLICATION_ENV: staging
 APPLICATION_PORT: "3000"
+CLOUD_STORAGE: "false"
 COMPLETED_SURVEY_SUBMISSION_TOPIC: sunbirdstaging.ml.survey.raw
 ELASTIC_SEARCH_SNIFF_ON_START: "false"
 ELASTICSEARCH_COMMUNICATIONS_ON_OFF: "OFF"
@@ -19,6 +20,7 @@ KAFKA_URL: 11.3.2.16:9092
 KEYCLOAK_PUBLIC_KEY_PATH: keycloak-public-keys
 ML_CORE_SERVICE_URL: http://ml-core-service:3000
 ML_PROJECT_SERVICE_URL: http://ml-projects-service:3000
+ML_SURVEY_SERVICE_URL: http://ml-survey-service:3000
 MONGODB_URL: mongodb://11.3.2.26:27017/ml-survey
 OBSERVATION_SUBMISSION_TOPIC: sunbirdstaging.ml.observation.raw
 SUBMISSION_RATING_QUEUE_TOPIC: sunbirdstaging.ml.submission.rating.raw
@@ -27,10 +29,10 @@ USER_SERVICE_URL: http://learner-service:9000
 replicaCount: 1
 
 image:
-  registory: sunbirded.azurecr.io
-  repository: sunbirded.azurecr.io/ml-survey-service
+  registry: docker.io
+  repository: ssksanthosh/ml-core-service
   tag: release-5.2.0
-  pullPolicy: IfNotPresent
+  #pullPolicy: IfNotPresent
  
   
 
